@@ -52,3 +52,13 @@ if (('Gato' === 'gato') && (5 > 2)) {
 } else {
   console.log('Falso')
 }
+
+// 'Gato' === 'gato || 5 > 2 
+//      false      || true
+//        true
+
+if(('Gato' === 'gato') || (5 > 2)) {
+  console.log('Gato' && 'Cão')
+} else {
+  console.log('Falso')
+}
