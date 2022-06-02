@@ -47,17 +47,13 @@ function faltaVisitar(paisesVisitaods) {
 console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
 
 function verificarSeTruthy(valor) {
-  if ((typeof valor) == true) {
-    return true
-  } else {
-    return false
-  }
+  return !!valor
 }
-
+//OK
 function perimetro(lado){
   return lado*4
 }
-
+// OK
 function nomeCompleto(nome, sobrenome){
   tipoNome = typeof nome
   tipoSobrenome = typeof sobrenome
@@ -69,4 +65,31 @@ function nomeCompleto(nome, sobrenome){
   
   }
 }
-// AULA 0205 FUNCOES 3
+// OK
+function verficaPar(numero){
+  if(numero % 2 === 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function tipoDado(dado) {
+  console.log(typeof dado)
+}
+
+// mostrar meu nome completo quando o scroll ocorrer
+
+addEventListener('scroll',function() {
+  console.log('José Carlos Araúujo Pontes')
+})
+
+function precisoVisitar(paisesVisitados){
+  var totalPaises = 193
+  return ``
+}
+
+var totalPaises = 193
+function jaVisitei(paisesVisitados) {
+  return `Já vistei ${paisesVisitados} do total de ${totalPaises} países.`
+}
