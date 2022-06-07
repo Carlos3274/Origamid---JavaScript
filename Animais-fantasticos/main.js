@@ -1,36 +1,50 @@
-// //NodeList é possível usar forEach, contudo, HTML colletion, não.
+// verifique a distancia da primeira imagem em relaão ao tipo da página
 
-// const titulos = document.getElementsByClassName('titulo')
+const img1 = document.querySelector('img')
+const img1distance = img1.getBoundingClientRect().top
 
-// // transformando HTML collection em array para usar o forEach
-// const titulosArray = Array.from(titulos)
+console.log(img1distance)
 
-// titulosArray.forEach(function(item){
-//   console.log(item)
-// })
+// Retorne a soma da largura de todas as imagens
 
-// // Arrou Function -> Sintaxe curta em relação a function expression
+const imagens = document.querySelectorAll('img')
 
-// // Basta trocar 'function' por =>
+imagens.forEach(function(imagem){
+  let somaImagens 
+  somaImagens += imagem.offsetHeight
 
-// console.log('----------------')
-// // se tiver apenas um argumento , pode reduzir um parenteses
-// // sem argumento, precisa de parenteses
-// // o ideal é sempre usar
-// titulosArray.forEach((item , index) => {
-//   console.log(item, index)
-// })
-
-// let i = 0
-// titulosArray.forEach(() => console.log(i++)) // maneira com 1 linha
-console.log('-----------')
-const paragrafos = document.querySelectorAll('p')
-
-paragrafos.forEach(function(p){
-  console.log(p.innerText)
+  return somaImagens
 })
 
-// tem que usar parenteses
+// Verifique se os links da página possuem 
+// o mínimo recomendado para telas utilizadas
+// com o dedo
 
+const links = document.querySelectorAll('a')
 
+links.forEach(function(link) {
+  let heightBoolean 
+  let widthBoolean
+  if(link.offsetHeight >= 48){
+    heightBoolean = true
+  }
+  if(link.offsetWidth >= 48) {
+    widthBoolean = true
+  }
+  else {
+    heightBoolean, widthBoolean = false
+    
+  }
+  console.log(heightBoolean && widthBoolean)
+  return (heightBoolean && widthBoolean)
+  
+})
 
+// Se o browser for menor que 720px, adicione a classe menu-mobile ao menu
+
+const small = window.matchMedia('(max-width: 720px')
+const menu = document.querySelector('.menu')
+if (small.matches) {
+  console.log('Tela menor que 600px')
+  menu.classList.add('menu-mobile')
+} 
