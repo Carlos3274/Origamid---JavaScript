@@ -11,7 +11,7 @@
 // const testeA = new Teste(1,'ok')
 
 // EXERCICIOS
-function Pessoas(nome, sobrenome, idade) {
+/* function Pessoas(nome, sobrenome, idade) {
   this.nome = nome,
   this.sobrenome = sobrenome,
   this.idade = idade
@@ -22,7 +22,7 @@ Pessoas.prototype.nomeCompleto = function() {
 }
 
 const joao = new Pessoas('João','Oliveira', 23)
-console.log(joao.nomeCompleto())
+console.log(joao.nomeCompleto()) */
 
 // Métodos acessados por Node List:
 /*
@@ -61,5 +61,6 @@ São muitos kkkk
 
 
 const li = document.querySelectorAll('li')
+const number = 3
 
 
