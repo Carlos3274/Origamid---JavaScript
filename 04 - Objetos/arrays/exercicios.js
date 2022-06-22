@@ -61,10 +61,9 @@ const compras = [
   }
 ]
 
-let acumulador = {}
-let totalCompras = 0
 
-const listaCompras = compras.reduce((acumulador, compra, index) => {
+
+/* const listaCompras = compras.reduce((acumulador, compra, index) => {
   const stringLimpa = (acumulador[index] = compra.preco.replace('R$ ', '').replace(',','.'))
   let number = parseFloat(stringLimpa)
   totalCompras += number
@@ -72,4 +71,11 @@ const listaCompras = compras.reduce((acumulador, compra, index) => {
 }, {})
 
 console.log(totalCompras)
+console.log(listaCompras) */
+const totalCompras = 0
+const listaCompras = compras.reduce((acumulador, compra, index) => {
+  const precoLimpo = +compra.preco.replace('R$ ','').replace(',','.')
+  return acumulador + precoLimpo
+},0)
+
 console.log(listaCompras)
