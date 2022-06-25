@@ -78,4 +78,13 @@ const listaCompras = compras.reduce((acumulador, compra, index) => {
   return acumulador + precoLimpo
 },0)
 
-console.log(listaCompras)
+
+const exemplo = [3, 8, 10]
+
+const pares = exemplo.filter((number) => {
+  return (number %2 === 0 )
+})
+
+console.log(pares)
+
+
