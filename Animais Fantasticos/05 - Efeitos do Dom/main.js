@@ -17,6 +17,7 @@ function iniTabNav() {
       section.classList.remove('ativo')
     })
     const direcao = tabContent[index].dataset.anime
+    
     tabContent[index].classList.add('ativo', direcao) 
   }
 
