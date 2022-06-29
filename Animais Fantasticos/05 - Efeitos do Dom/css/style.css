@@ -217,9 +217,17 @@ body {
   }
 
 }
+
+
+
 /* se tiver JS habilitado no browser */
+.js .js-tabcontent section {
+  display: none;
+}
+
 .js-tabcontent section.ativo {
   display: block !important;
+  
 }
 
 /* ---------------- Animação de surgimento ------------- */
