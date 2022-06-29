@@ -1,9 +1,9 @@
 function iniTabNav() {
     // seleciona as imgagens 
-  const tabMenu = document.querySelectorAll('.js-tabmenu li')
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li')
 
   // tabContent = seções
-  const tabContent = document.querySelectorAll('.js-tabcontent section')  
+  const tabContent = document.querySelectorAll('[data-tab="content"] section')  
 
 
   if(tabMenu.length && tabContent.length){//verifica se existe tabmenu e tabcontent
@@ -36,7 +36,7 @@ function iniTabNav() {
 iniTabNav()
 
 function initAccordion(){
-  const accordionList = document.querySelectorAll('.js-accordion dt')
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt')
   const activeClass = 'ativo'
   if(accordionList.length) {
     accordionList[0].classList.add(activeClass)
@@ -57,7 +57,7 @@ initAccordion()
 
 function initScrollSuave(){
 
-  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
+  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]')
 
   function scrollToSection(event) {
     event.preventDefault()
@@ -80,7 +80,7 @@ initScrollSuave() // funciona apenas no Chrome e Firefox
 
 function initAnimacaoScroll() {
 
-  const sections = document.querySelectorAll('.js-scroll')
+  const sections = document.querySelectorAll('[data-anime="scroll"]')
 
   if(sections.length){ // Verifica se não está em outra página
     const windowMetade = window.innerHeight * 0.6
