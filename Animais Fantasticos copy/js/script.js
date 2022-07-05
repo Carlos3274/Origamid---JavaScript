@@ -7,6 +7,8 @@ import initTooltip from "./moudeles/tooltip.js"
 import initDropdownMenu from "./moudeles/dropdown-menu.js"
 import initMenuMobile from "./moudeles/menu-mobile.js"
 import initAnimaNumeros from "./moudeles/anima-numeros.js"
+import initFuncionamento from "./moudeles/funcionamento.js"
+
 
 initScrollSuave()
 initAnimacaoScroll()
@@ -17,3 +19,4 @@ initTooltip()
 initDropdownMenu()
 initMenuMobile()
 initAnimaNumeros()
+initFuncionamento()
