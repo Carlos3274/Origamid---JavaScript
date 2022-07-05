@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  input {
+    display: block;
+  }
+
+  .invalido {
+    border-color: red;
+  }
+
+
+</style>
+<body>
+  <form name="contato" id="contato">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" required>
+    <span class="erro"></span>
+    <label for="email">email</label>
+    <input type="email" name="email" id="email" required>
+    <label for="mensagem">Mensagem</label>
+    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+    <span class="erro"></span>
+    <select name="cores" id="cores">
+      <option value="blue">azul</option>
+      <option value="red">vermelho</option>
+    </select>
+    <input type="color">
+    <input type="checkbox" id="identidade" value="identidade">
+  </form>
+  <script>
+    const contato = document.querySelector('#contato')
+    const inputs = contato.elements
+    // pega so os inputs
+
+
+    /* function handleKeyup(event) {
+      const target = event.target
+      console.log('O nome do cara é '+ this.nome.value)
+      document.body.style.backgroundColor = target.value
+      console.log(target.value)
+      if(!event.target.checkValidity()){
+        event.target.classList.add('invalido')
+        target.nextElementSibling.innerText = target.validationMessage
+        target.setCustomValidity('Esse campo é super importante')
+      }
+      console.log(target.checked)
+      /* document.body.style.backgroundColor = target.value */
+
+      // diferença entre radius X checked
+      // o check pode selecionar varios e o radius apenas umé selecionado e o outro é descelecionado
+    
+    // 4 MINUTOS DO VIDEO
+    const dados = {}
+    function handleChange(){
+      
+      dados[event.target.name] = event.target.value
+    }
+    contato.addEventListener('change', handleChange)
+  </script>
+</body>
+</html>
