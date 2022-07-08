@@ -18,7 +18,6 @@ function handleButton(event){
   }).then((body) => {
     span.innerText = body
   })
- 
 }
 
 formulario.addEventListener('change', handleChange)

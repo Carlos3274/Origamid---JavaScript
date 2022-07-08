@@ -1,11 +1,20 @@
 /* Utilizando a API blockchain retorno no dom, o valor de compra da bitcoin emr reais, atualize este valor a cada 30s */
 
-const valor = fetch('https://blockchain.info/ticker')
-const span = document.querySelector('span')
 
+const span = document.querySelector('span')
+const btn = document.querySelector('button')
+
+
+function handleClick(event) {
+  event.preventDefault()
+  mostrarValor()
+}
+
+addEventListener('click',handleClick)
 
 function mostrarValor() {
-  valor.then((response) => {
+  const valor = fetch('https://blockchain.info/ticker')
+  .then((response) => {
     return response.json()
   }).then((body) => {
     span.innerText ='R$ '+ body["BRL"].buy.toString().replace('.',',')
@@ -13,4 +22,4 @@ function mostrarValor() {
 }
 
 
-setInterval(mostrarValor, 30000)
+setInterval(mostrarValor, 500)

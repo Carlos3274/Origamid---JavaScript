@@ -20,4 +20,4 @@ function handleClick(event){
 
 btn.addEventListener('click', handleClick)
 
-
+setInterval(handleClick, 500)
