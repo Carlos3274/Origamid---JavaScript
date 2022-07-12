@@ -5,7 +5,7 @@ function createButton(text) {
     return buttonElement
   }
   return {
-    element: element,    // O objeto ao ser criado herdará a função element e a propriedade text
+    element: element,  // O objeto ao ser criado herdará a função element e a propriedade text
     text: text,          
   }
 }
