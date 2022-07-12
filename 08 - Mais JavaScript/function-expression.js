@@ -15,9 +15,6 @@
 // Exercícios -
 // Remova o erro
 
-
-
-
 // como podemos utilizar a função abaixo
 
 const active = callback => callback()
