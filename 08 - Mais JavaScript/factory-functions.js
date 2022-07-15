@@ -41,10 +41,10 @@ console.log(joao.andar()) //
 // constructor function sem New
 
 function People(name) {
-  if(!(this instanceof Pessoa)) {
+  if(!(this instanceof People)) {  // (!new.target)
     return new Pessoa
   }
   this.name = name
 }
 
-const designer = new People('André')
+const designer = People('André')
