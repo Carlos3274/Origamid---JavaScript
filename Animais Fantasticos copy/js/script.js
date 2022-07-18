@@ -6,8 +6,9 @@ import initModal from "./moudeles/modal.js"
 import initTooltip from "./moudeles/tooltip.js"
 import initDropdownMenu from "./moudeles/dropdown-menu.js"
 import initMenuMobile from "./moudeles/menu-mobile.js"
-import initAnimaNumeros from "./moudeles/anima-numeros.js"
 import initFuncionamento from "./moudeles/funcionamento.js"
+import initFetchAnimais from "./moudeles/fetch-animais.js"
+import initFetchBitcoin from "./moudeles/fetch-bitcoin.js"
 
 
 initScrollSuave()
@@ -18,5 +19,6 @@ initModal()
 initTooltip()
 initDropdownMenu()
 initMenuMobile()
-initAnimaNumeros()
 initFuncionamento()
+initFetchAnimais()
+initFetchBitcoin()

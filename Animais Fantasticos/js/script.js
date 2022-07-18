@@ -10,7 +10,6 @@ import initFuncionamento from "./moudeles/funcionamento.js"
 import initFetchAnimais from "./moudeles/fetch-animais.js"
 import initFetchBitcoin from "./moudeles/fetch-bitcoin.js"
 
-
 initScrollSuave()
 initAnimacaoScroll()
 initAccordion()
