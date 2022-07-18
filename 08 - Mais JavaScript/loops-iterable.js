@@ -12,6 +12,7 @@ const carro = {
   ano: 2018,
 }
 
+
 for(const key in carro) {
   console.log(key, carro[key])
 }
